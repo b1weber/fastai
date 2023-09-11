@@ -16,7 +16,7 @@ jobs:
   test-nbdev-sync:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-python@v4
         with:
           python-version: '3.10'
@@ -51,7 +51,7 @@ jobs:
       with:
         python-version: ${{ matrix.py }}
     - name: checkout contents of PR
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: Install libraries
       run: |
         pip install git+https://github.com/fastai/fastcore.git@master
